@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淄博万象汇POS操作手册</title>
+    <link rel="stylesheet" href="../zbwxh/lib/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../gotop/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="../gotop/css/font-awesome.min.css">
+    <script type="text/javascript" src="../gotop/js/jquery.min.js"></script>
+    <script src="../zbwxh/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../gotop/js/nav.js"></script>
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            background: #f2f2f2;
+        }
+
+        .wrap .line {
+            height: 500px;
+            width: 188px;
+            margin: 0 auto;
+        }
+
+        .leftNav-item {
+            position: fixed;
+            left: 82%;
+            top: 80%;
+            z-index: 999999;
+        }
+    </style>
+    <SCRIPT language=javascript>
+        $(function () {
+            $('a').click(function () {
+                //根据a标签的href转换为id选择器，获取id元素所处的位置，并高度减50px（这里根据需要自由设置）
+                $('html,body').animate({
+                    scrollTop: ($($(this).attr('href')).offset().top - 0)
+                }, 500);
+            });
+        });
+    </SCRIPT>
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 400;
+            border: none;
+            cursor: pointer;
+            z-index: 999999;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            z-index: 999999;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 999999;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            z-index: 999999;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            z-index: 999999;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+            z-index: 999999;
+        }
+    </style>
+
+</head>
+<!--
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>淄博万象汇POS操作手册</legend>
+    </fieldset>
+    -->
+
+<body>
+    <div class="leftNav-item">
+        <ul>
+            <li title="在线客服">
+                <i class="fa fa-comments-o"></i>
+                <a cursor="pointer" href="tel:13370693115" class="rota">POS报修</a>
+            </li>
+            <li title="返回顶部" class="for-top">
+                <i class="fa fa-arrow-up"></i>
+                <a cursor="pointer" href="javascript:;" class="rota">回到顶部</a>
+            </li>
+        </ul>
+    </div>
+    <div class="layui-tab" lay-filter="demo" lay-allowclose="">
+
+        <ul class="layui-tab-title">
+            <li class="layui-this">POS使用指南</li>
+            <li>POS常见问题</li>
+            <li>右上角点击收藏</li>
+        </ul>
+
+        <div class="layui-tab-content">
+            <div id="zn" class="layui-tab-item layui-show">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">操作指南：</label>
+                            <div class="layui-input-inline">
+                                <div class="dropdown">
+                                    <button class="dropbtn">请选择问题</button>
+                                    <div class="dropdown-content">
+                                        <a href="#syudl">收银员登陆</a>
+                                        <a href="#xsxt">销售系统</a>
+                                        <a href="#lscx">历史交易查询</a>
+                                        <a href="#gjbd">关机闭店</a>
+                                        <a href="#ywzy">银行卡&微信&支付宝&银联卡结算</a>
+                                        <a href="#cyh">银行卡查询余额</a>
+                                        <a href="#cgw">购物卡查询余额</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </blockquote>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div id="syudl" class="layui-card-header">一、收银员登入</div>
+                        <div class="layui-card-body">
+                            1 ）轻触 1 收银员登入</br>
+                            <img src="../img/01.png" width="100%" height="100%" />
+                            </br>
+                            2 ）轻触 职员编号输入框 → 键盘输入 职员编号 →
+                            轻触 确定-F1 → 核对职员姓名 → 轻触 密码输入框
+                            或点击键盘 确定 → 键盘输入 密码 → 轻触 确定-F1</br>
+
+                            <img src="../img/02.png" width="100%" height="100%" />
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div id="xsxt" class="layui-card-header">二、销售系统</div>
+                        <div class="layui-card-body">
+                            1 ）轻触 2 销售系统</br>
+                            <img src="../img/03.png" width="100%" height="100%" />
+                            2 ）若顾客为万象汇会员 → 轻触 1 是</br>
+                            <img src="../img/04.png" width="100%" height="100%" />
+                            3 ）电话输入框中 输入电话 → 轻触 确定-F1</br>
+                            <img src="../img/05.png" width="100%" height="100%" />
+                            4 ）查看积分结余、核对顾客姓名 → 键盘输入 0 → 点击键盘 确定 → 选择货号（此为万象汇货号，正常为1个） → 点击键盘 确定</br>
+                            <img src="../img/06.png" width="100%" height="100%" />
+                            5 ）键盘输入售价 → 录入所有货品 → 点击键盘 确定 → 再次点击键盘 确定</br>
+                            <img src="../img/07.png" width="100%" height="100%" />
+                            6 ）轻触 选择付款形式F12 → 轻触（现金、内卡、购物卡、微信、支付宝、团购券等），完成支付 → 等待约5 秒打印出小票</br>
+                            <img src="../img/08.png" width="100%" height="100%" />
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div id='lscx' class="layui-card-header">三、历史交易查询</div>
+                        <div class="layui-card-body">
+                            1 ）轻触 F3 报表 → 轻触 1 电子流水账</br>
+                            <img src="../img/09.png" width="100%" height="100%" />
+                            2 ）填写查询日期、交易时间（可选择相应查询
+                            单据种类）→ 如需打印，轻触 编印-F3， 否则轻
+                            触 离开-F4</br>
+                            <img src="../img/10.png" width="100%" height="100%" />
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header">四、销售小结</div>
+                        <div class="layui-card-body">
+                            1 ）进入主界面 → 轻触 3 销售小结 → 可以查看当日销售额</br>
+                            <img src="../img/11.png" width="100%" height="100%" />
+                            2 ）如需打印，轻触 编印-F3，否则轻触 离开-F4（此编印不同于销售总结，不会对销售清零）</br>
+                            <img src="../img/12.png" width="100%" height="100%" />
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div id="gjbd" class="layui-card-header">五、关机闭店</div>
+                        <div class="layui-card-body">
+                            1 ）进入主界面 → 轻触 4 销售总结</br>
+                            <img src="../img/13.png" width="100%" height="100%" />
+                            2 ）轻触 编印-F4</br>
+                            <img src="../img/14.png" width="100%" height="100%" />
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div id="ywzy" class="layui-card-header">六、银行卡&支付宝&微信结算</div>
+                        <div class="layui-card-body">
+                            <span class="layui-badge-dot"></span>
+                            <font color="red">建议每周进行一次结算以防储存数量已满影响银行卡，支付宝和微信支付</font></br>
+                            1 ）进入主界面 → 轻触 8 银行卡
+                            <img src="../img/15.png" width="100%" height="100%" />
+                            2 ）轻触 3 结账</br>
+                            <img src="../img/16.png" width="100%" height="100%" />
+                            3 ）轻触 1 是，</br>
+                            <img src="../img/17.png" width="100%" height="100%" />
+                            4 ）若需打印结账单，轻触 1 是 否则轻触 0 否，在刷卡手柄上根据提示进行信息确认</br>
+                            <img src="../img/18.png" width="100%" height="100%" />
+                            5 ）轻触 1 是</br>
+                            <img src="../img/19.png" width="100%" height="100%" />
+                            6 ）若需打印结算单，轻触 编印-F3</br>
+                            <img src="../img/20.png" width="100%" height="100%" />
+
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div id="cyh" class="layui-card-header">七、银行卡查询余额</div>
+                        <div class="layui-card-body">
+                            1 ）进入主界面 → 轻触 8 银联卡</br>
+                            <img src="../img/21.png" width="100%" height="100%" />
+                            2 ）轻触 1 建行收单</br>
+                            <img src="../img/22.png" width="100%" height="100%" />
+                            3 ）轻触 4 查询余额，插入银行卡</br>
+                            <img src="../img/23.png" width="100%" height="100%" />
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div id="cgw" class="layui-card-header">八、购物卡查询余额</div>
+                        <div class="layui-card-body">
+                            1 ）进入主界面 → 轻触 9 </br>
+                            <img src="../img/24.png" width="100%" height="100%" />
+                            2 ）轻触 4 查询余额 插入购物卡 </br>
+                            <img src="../img/25.png" width="100%" height="100%" />
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div id="wt"class="layui-tab-item">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">常见问题：</label>
+                            <div class="layui-input-inline">
+                                <div class="dropdown">
+                                    <button class="dropbtn">请选择问题</button>
+                                    <div class="dropdown-content">
+                                        <a href="#wfkj">无法开机</a>
+                                        <a href="#lwsb">联网失败</a>
+                                        <a href="#xsbky">【2销售系统】不可用</a>
+                                        <a href="#bdxp">小票打印失败</a>
+                                        <a href="#bnsk">不能刷银行卡</a>
+                                        <a href="#bnwp">不能刷微信支付宝</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </blockquote>
+
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div sytle="cursor:pointer" id="wfkj" class="layui-card-header">一、无法开机</div>
+                        <div class="layui-card-body">
+                            1）故障现象：按下开机键后设备不启动</br>
+                            2）故障原因：a、电源接触不良 b、设备故障</br>
+                            3）解决方法：a、检查收银机电源是否连接 b、点击屏幕右侧按钮联系商场IT</br>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div sytle="cursor:pointer" id="lwsb" class="layui-card-header">二、联网失败</div>
+                        <div class="layui-card-body">
+                            1）故障现象：开机后显示系统网络断开，如下图所示</br>
+                            <img src="../img/26.png" width="100%" height="100%" /></br>
+                            <img src="../img/27.png" width="100%" height="100%" />
+                            2）故障原因：a、店铺网线接触不良 b、商场网络故障</br>
+                            3）解决方法：a、店铺自检网线接头是否连接正常，轻触 网络连接标识→轻触【联网- - F1 】b、点击屏幕右侧按钮联系商场 IT</br>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div sytle="cursor:pointer" id="xsbky" class="layui-card-header">三、【2销售系统】不可用</div>
+                        <div class="layui-card-body">
+                            1）故障现象：【1 收银员登入】后【2 销售系统】为灰色不可使用</br>
+                            <img src="../img/28.png" width="100%" height="100%" /></br>
+                            2）故障原因：前一日未做销售总结</br>
+                            3）解决方法：轻触【4 销售总结】进行销售总结后，重新做【1 收银员登入】 </br>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div sytle="cursor:pointer" id="bdxp" class="layui-card-header">四、小票打印失败</div>
+                        <div class="layui-card-body">
+                            <div class="layui-collapse" lay-filter="test">
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">交易成功，未打小票，打印机指示灯为绿色</h2>
+                                    <div class="layui-colla-content">
+                                        <p>故障原因：打印程序未调用成功。</br>
+                                            解决方法：重启POS机，在【 2 销售系统】→【 F8 重印发票】，核对小票信息，进行编印。</p>
+                                    </div>
+                                </div>
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">顾客收到扣款信息，POS机重启后无重印小票</h2>
+                                    <div class="layui-colla-content">
+                                        <p>故障原因：单边账。</br>解决方法：联系商场营管员。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">打印机指示灯为黄色</h2>
+                                    <div class="layui-colla-content">
+                                        <p>故障原因：缺纸，打印纸装反或设备故障。</br>解决方法：检查是否为缺纸和打印纸放反，以上方法如未解决请联系商场IT
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">打印机指示灯不亮</h2>
+                                    <div class="layui-colla-content">
+                                        <p>故障原因：未通电。
+                                            </br>解决方法：检查打印机是否通电，重新连接电源后重启 POS机器。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div sytle="cursor:pointer" id="bnsk" class="layui-card-header">五、不能刷银行卡</div>
+                        <div class="layui-card-body">
+                            <div class="layui-collapse" lay-filter="test">
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">无法刷卡，显示“储存已满，请结算”</h2>
+                                    <div class="layui-colla-content">
+                                        <p>故障原因：店员未定期进行银行卡结算操作（建议一周进行一次银行卡结算），导致销售笔数达到上限。</br>
+                                            解决方法：按照</p><a 
+                                            href="PosIns2.html#ywzy" target="zn">《淄博万象汇 POS 快速操作指南》中【六、银行卡& &
+                                            支付宝& & 微信结算】(点击跳转)</a>                                         
+                                        <p>步骤进行结账操作</p>
+                                    </div>
+                                </div>
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">无法刷卡，显示“握手失败”</h2>
+                                    <div class="layui-colla-content">
+                                        <p>故障原因：刷卡手柄与 POS</br>解决方法：重新插拔刷卡手柄与 pos
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">刷信用卡时，显示“商户未登记”</h2>
+                                    <div class="layui-colla-content">
+                                        <p>故障原因：
+                                            各大银行对个人信用卡消费做了限制消费政策调整，非系统故障，顾客如有疑问请联系发卡行</br>解决方法：告知顾客信用卡刷卡失败原因，更换银行卡或用其他支付方式支付。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div sytle="cursor:pointer" id="bnwp" class="layui-card-header">六、不能刷微信支付宝</div>
+                        <div class="layui-card-body">
+
+                            故障现象：消费失败，显示“储存已满，请结算”</br>
+                            故障原因：店员未定期进行结算操作（建议每周进行一次结账），导致销售笔数达到上限</br>
+                            解决方法：按照</p><a 
+                            href="PosIns2.html#ywzy">《淄博万象汇 POS 快速操作指南》中【六、银行卡& &
+                            支付宝& & 微信结算】(点击跳转)</a></br>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function () {
+            var element = layui.element;
+
+            //…
+        });
+    </script>
+</body>
+
+</html>
